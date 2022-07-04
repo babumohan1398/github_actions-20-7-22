@@ -32,10 +32,15 @@ The ansible scripts are to be kept on the clops GitLab account and the master br
 ## Create Docker file for the application
 
 * Create a [multistage](https://docs.docker.com/develop/develop-images/multistage-build/) docker file for the application.  
-* Starts a build image with [golang:alpine](https://hub.docker.com/_/golang).
+* Starts a build image with [golang:alpine](https://hub.docker.com/_/golang). Follow the below steps
+    1) Create a dir /go/src/app
+    2) Copy main.go into the above dir
+    3) Run the below command from the above dir
+    ```CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o app . ```
 * The resulting binary to be spun up using [scratch](https://hub.docker.com/_/scratch/) image
+    1) Entry point should be as below
+    ```ENTRYPOINT [ "./app" ]```
 * Test the docker file and create the docker image out of it manually and name it at clops_go image
-
 ## Create the K8s manifest files
 
 Create the below k8s manifest files for the deployment based on the requirements given below. You may refer to the official documentation of k8s for the same.
