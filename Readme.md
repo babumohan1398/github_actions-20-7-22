@@ -37,7 +37,7 @@ The ansible scripts are to be kept on the clops GitLab account and the master br
     2) Copy main.go into the above dir
     3) Run the below command from the above dir
 
-    ```CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o app . ```
+    ```RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o app *.go ```
 * The resulting binary to be spun up using [scratch](https://hub.docker.com/_/scratch/) image
     1) Entry point should be as below
     
