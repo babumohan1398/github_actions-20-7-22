@@ -35,9 +35,10 @@ The ansible scripts are to be kept on the clops GitLab account and the master br
 * Starts a build image with [golang:alpine](https://hub.docker.com/_/golang). Follow the below steps
     1) Create a dir /go/src/app
     2) Copy main.go into the above dir
-    3) Run the below command from the above dir
+    3) Make the above dir as the WORKDIR
+    4) Run the below command from the above dir
 
-    ```RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o app *.go ```
+    ```RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o app main.go ```
 * The resulting binary to be spun up using [scratch](https://hub.docker.com/_/scratch/) image
     1) Entry point should be as below
     
