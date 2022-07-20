@@ -25,4 +25,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: mohan1398/github-actions/app:latest
+          tags: mohan1398/github-actions/app
