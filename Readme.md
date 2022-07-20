@@ -80,6 +80,6 @@ The CI pipeline job should contain the below stages
 2) Docker Build
 3) Publish to DockerHub
 4) Deploy to EKS
-5) Send a Notification to your CloudifyOps email ID!
+5) Send a Notification to your CloudifyOps email ID
 
 For the deployment stage - you can use either create an Ansible playbook for Kubernetes deployment or use appropriate kubectl commands or even Jenkins plugins.
