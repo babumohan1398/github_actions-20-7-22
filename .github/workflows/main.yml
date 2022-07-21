@@ -28,4 +28,4 @@ jobs:
         with:
           push: true
           repo: github-actions
-          tags: mohan1398/app:latest
+          tags: mohan1398/github-actions:v3
