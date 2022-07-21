@@ -26,4 +26,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repo: mohan1398/github-actions
           tags: mohan1398/github-actions/latest
