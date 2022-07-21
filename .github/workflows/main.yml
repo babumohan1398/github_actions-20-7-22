@@ -20,5 +20,5 @@ jobs:
       -
         name: Build and push
         run: |
-          docker build -t mohan1398/github-actions:v1
+          docker build -t mohan1398/github-actions:v1 .
           docker push mohan1398/github-actions:v1
