@@ -1,12 +1,10 @@
 name: ci
-
 on:
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
-
+    
 jobs:
   docker:
     runs-on: self-hosted
@@ -28,4 +26,4 @@ jobs:
         with:
           push: true
           repo: github-actions
-          tags: mohan1398/github-actions:v3
+          tags: mohan1398/github-actions:v4
